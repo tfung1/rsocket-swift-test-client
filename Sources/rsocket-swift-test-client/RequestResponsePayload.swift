@@ -12,6 +12,7 @@ public struct Payload : Codable {
     public var data: String
 }
 
+/// Response format from backend test echo server
 public struct RequestResponsePayload : Codable {
     public var date: String? = nil
     public var payload: Payload

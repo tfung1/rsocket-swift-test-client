@@ -29,9 +29,10 @@ struct RequestResponseClientExample: ParsableCommand {
     var data = "data"
 
     @Option
-    var url = URL(string: "ws://localhost:7000/v1/webevents")!
+    var url = URL(string: "ws://localhost:7000/")!
 
     func run() throws {
+        print("url=\(url)")
         if (try RequestResponseClient.requestResponse(metadata: metadata, data: data)) {
             print("Success")
         } else {

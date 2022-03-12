@@ -9,7 +9,12 @@ import NIOCore
 import NIOFoundationCompat
 
 public struct RequestResponseClient {
-
+    
+    /// Calls RSocket RequestResponse and validates the metadata and data echoed from the server is same as what as sent
+    /// - Parameters:
+    ///   - metadata: request/response metadata to be sent to server
+    ///   - data: request/response data to be sent to server
+    /// - Returns: true if metadata and data returned from server is same as what was sent, false otherwise
     public static func requestResponse(metadata: String, data: String) throws -> Bool {
         let decoder = JSONDecoder()
         var status = false

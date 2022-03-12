@@ -25,3 +25,7 @@ Local RSocket server that echos back request/respone metadata and data
 ```
 swift test
 ```
+
+## Test cases
+
+1. RequestResponse metadata and data sent are the same
