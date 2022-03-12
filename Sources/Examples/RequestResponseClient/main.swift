@@ -33,7 +33,7 @@ struct RequestResponseClientExample: ParsableCommand {
 
     func run() throws {
         print("url=\(url)")
-        if (try RequestResponseClient.requestResponse(metadata: metadata, data: data)) {
+        if (try RequestResponseClient.requestResponse(data: data)) {
             print("Success")
         } else {
             print("Failed")

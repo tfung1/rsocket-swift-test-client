@@ -12,10 +12,9 @@ public struct RequestResponseClient {
     
     /// Calls RSocket RequestResponse and validates the metadata and data echoed from the server is same as what as sent
     /// - Parameters:
-    ///   - metadata: request/response metadata to be sent to server
     ///   - data: request/response data to be sent to server
     /// - Returns: true if metadata and data returned from server is same as what was sent, false otherwise
-    public static func requestResponse(metadata: String, data: String) throws -> Bool {
+    public static func requestResponse(data: String) throws -> Bool {
         let decoder = JSONDecoder()
         var status = false
         let url = URL(string: "ws://localhost:7000/")!
@@ -48,7 +47,7 @@ public struct RequestResponseClient {
             .get()
             print("response=\(String(describing: response))")
             // Test if metadata and data are the same sent vs received from server and echo back
-            status = (response?.payload.data == data && response?.payload.metadata == metadata)
+            status = (response?.payload.data == data && response?.payload.metadata == "metadata")
         } catch {
             print("error=\(error.localizedDescription)")
             throw ClientError.dataNotSame(message: "metadata or data not same as sent")
