@@ -18,12 +18,12 @@ let package = Package(
             url: "https://github.com/rsocket/rsocket-swift.git",
             .revision("6fc34008c188dd97f3f6526f3b438822b6428a11")
         ),
-        .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift.git", .exact("6.6.0")),
-        .package(url: "https://github.com/apple/swift-nio", .exact("2.32.1")),
-        .package(url: "https://github.com/apple/swift-nio-extras", .exact("1.8.0")),
-        .package(url: "https://github.com/apple/swift-nio-transport-services", .exact("1.9.2")),
-        .package(url: "https://github.com/apple/swift-nio-ssl", .exact("2.10.4")),
-        .package(url: "https://github.com/apple/swift-argument-parser", .exact("0.4.0"))
+        .package(url: "https://github.com/ReactiveCocoa/ReactiveSwift.git", from: "6.6.0"),
+        .package(url: "https://github.com/apple/swift-nio", from: "2.32.1"),
+        .package(url: "https://github.com/apple/swift-nio-extras", from: "1.8.0"),
+        .package(url: "https://github.com/apple/swift-nio-transport-services", from: "1.9.2"),
+        .package(url: "https://github.com/apple/swift-nio-ssl", from: "2.10.4"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "0.4.0")
     ],
     targets: [
         // Targets are the basic building blocks of a package. A target can define a module or a test suite.
