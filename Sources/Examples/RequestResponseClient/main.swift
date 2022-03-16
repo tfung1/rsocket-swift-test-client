@@ -32,8 +32,10 @@ struct RequestResponseClientExample: ParsableCommand {
     var url = URL(string: "ws://localhost:7000/")!
 
     func run() throws {
-        print("url=\(url)")
-        if (try RequestResponseClient.requestResponse(data: data)) {
+        print("connecting to url=\(url)")
+        let response = try RequestResponseClient.requestResponse(metadata: metadata, data: data)
+        let status = (response?.payload.data == data && response?.payload.metadata == metadata)
+        if (status && response != nil) {
             print("Success")
         } else {
             print("Failed")

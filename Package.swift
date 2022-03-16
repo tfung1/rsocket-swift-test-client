@@ -45,7 +45,7 @@ let package = Package(
             dependencies: [
                 "rsocket-swift-test-client",
             ]
-            ),
+        ),
         // Examples
         .executableTarget(
             name: "ClientExample",
