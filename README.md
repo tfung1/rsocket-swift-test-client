@@ -15,7 +15,11 @@ swift build
 Local RSocket server that echos back request/respone metadata and data
 
 1. clone https://github.com/tfung1/rsocket-test-server
-2. start server
+2. build
+    ```
+    yarn
+    ```
+3. start server
     ```
     yarn start
     ```
